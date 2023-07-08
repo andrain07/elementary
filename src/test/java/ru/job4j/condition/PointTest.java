@@ -30,4 +30,13 @@ public class PointTest {
         double expected = 3.16;
         Assert.assertEquals(expected, out, 0.01);
     }
+
+    @Test
+    public void when123to456then5dot19() {
+        Point startPoint = new Point(1, 2, 3);
+        Point endPoint = new Point(4, 5, 6);
+        double out = startPoint.distance3d(endPoint);
+        double expected = 5.19;
+        Assert.assertEquals(expected, out, 0.01);
+    }
 }
