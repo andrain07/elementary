@@ -9,13 +9,11 @@ public class Machine {
         int size = 0;
         money -= price;
         int i = 0;
-        int j = 0;
         while (money > 0) {
             if (money >= coins[i]) {
                 money -= coins[i];
-                rsl[j] = coins[i];
+                rsl[size] = coins[i];
                 size++;
-                j++;
             } else {
                 i++;
             }
