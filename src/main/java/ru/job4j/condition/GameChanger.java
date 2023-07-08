@@ -1,7 +1,7 @@
 package ru.job4j.condition;
 
-public class Game {
-    public static void menu(String name) {
+public class GameChanger {
+    public static void showMenu(String name) {
         if ("super mario".equals(name)) {
             System.out.println("Start - super mario");
         }
@@ -14,6 +14,6 @@ public class Game {
     }
 
     public static void main(String[] args) {
-        Game.menu("tanks");
+        GameChanger.showMenu("tanks");
     }
 }

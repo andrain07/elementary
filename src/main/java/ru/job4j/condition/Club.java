@@ -1,7 +1,7 @@
 package ru.job4j.condition;
 
 public class Club {
-    public static void permission(boolean hasMoney, boolean beFriend) {
+    public static void checkPermission(boolean hasMoney, boolean beFriend) {
         if (hasMoney || beFriend) {
             System.out.println("I can go to the club.");
         } else {
@@ -10,9 +10,9 @@ public class Club {
     }
 
     public static void main(String[] args) {
-        permission(true, true);
-        permission(true, false);
-        permission(false, true);
-        permission(false, false);
+        checkPermission(true, true);
+        checkPermission(true, false);
+        checkPermission(false, true);
+        checkPermission(false, false);
     }
 }

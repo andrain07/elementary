@@ -3,14 +3,14 @@ package ru.job4j.array;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SkipNegativeTest {
+public class NegativeElementSkipperTest {
     @Test
     public void whenArrayRowAndColumnEquals() {
         int[][] array = {
                 {1, -2},
                 {1, 2}
         };
-        int[][] result = SkipNegative.skip(array);
+        int[][] result = NegativeElementSkipper.skip(array);
         int[][] expected = {
                 {1, 0},
                 {1, 2}
@@ -26,7 +26,7 @@ public class SkipNegativeTest {
                 {1, -2, 3, -4},
                 {1, 2, -3, -4, 5}
         };
-        int[][] result = SkipNegative.skip(array);
+        int[][] result = NegativeElementSkipper.skip(array);
         int[][] expected = {
                 {1, 0},
                 {1, 2, 0},

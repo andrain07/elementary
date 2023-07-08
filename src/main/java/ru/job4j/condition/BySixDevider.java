@@ -1,6 +1,6 @@
 package ru.job4j.condition;
 
-public class DivideBySix {
+public class BySixDevider {
     public static String checkNumber(int number) {
         String rsl;
         if (number % 3 == 0 && number % 2 == 0) {

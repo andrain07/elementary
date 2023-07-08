@@ -1,6 +1,6 @@
 package ru.job4j.array;
 
-public class LengthArrayArrays {
+public class ArraysLength {
     public static void main(String[] args) {
         int[][] numbers =
                 {
