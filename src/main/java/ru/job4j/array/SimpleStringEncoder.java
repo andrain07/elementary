@@ -3,31 +3,18 @@ package ru.job4j.array;
 public class SimpleStringEncoder {
     public static String encode(String input) {
         StringBuilder result = new StringBuilder();
-        char currentSymbol = '\0';
+        char previousSymbol = input.charAt(0);
         int counter = 1;
-        for (int i = 0; i < input.length() - 1; i++) {
-            currentSymbol = input.charAt(i);
-            if (currentSymbol != input.charAt(i + 1)) {
-                result.append(currentSymbol);
-                if (counter > 1) {
-                    result.append(counter);
-                }
+        for (int i = 1; i < input.length(); i++) {
+            if (input.charAt(i) != previousSymbol) {
+                result.append(counter > 1 ? String.valueOf(previousSymbol) + counter : previousSymbol);
+                previousSymbol = input.charAt(i);
                 counter = 1;
             } else {
                 counter++;
             }
         }
-
-        char lastSymbol = input.charAt(input.length() - 1);
-        if (currentSymbol == lastSymbol) {
-            result.append(currentSymbol);
-            if (counter > 1) {
-                result.append(counter);
-            }
-        } else {
-            result.append(lastSymbol);
-        }
-
+        result.append(counter > 1 ? String.valueOf(previousSymbol) + counter : previousSymbol);
         return result.toString();
     }
 }
