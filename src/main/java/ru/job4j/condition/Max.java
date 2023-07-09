@@ -6,20 +6,10 @@ public class Max {
     }
 
     public static int getMax(int first, int second, int third) {
-        return first > third ? Math.max(first, second) : Math.max(third, second);
+        return getMax(first, getMax(second, third));
     }
 
     public static int getMax(int first, int second, int third, int fourth) {
-        int max = first;
-        if (second > max) {
-            max = second;
-        }
-        if (third > max) {
-            max = third;
-        }
-        if (fourth > max) {
-            max = fourth;
-        }
-        return max;
+        return getMax(getMax(first, second), getMax(third, fourth));
     }
 }
