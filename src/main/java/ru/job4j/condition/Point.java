@@ -6,12 +6,11 @@ import static java.lang.Math.pow;
 public class Point {
     private final int x;
     private final int y;
-    private final int z;
+    private int z;
 
     public Point(int first, int second) {
         this.x = first;
         this.y = second;
-        z = -1;
     }
 
     public Point(int x, int y, int z) {
